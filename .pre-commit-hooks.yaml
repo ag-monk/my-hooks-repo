@@ -1,0 +1,7 @@
+- id: jira-ticket-check
+  name: commit msg should have a jira ticket
+  description: checks for jira ticket in commit msg
+  entry: '\A(?![A-Z]+-[0-9]+)'
+  args: [--multiline]
+  language: pygrep
+  stages: [commit-msg]
