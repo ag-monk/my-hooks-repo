@@ -5,3 +5,10 @@
   args: [--multiline]
   language: pygrep
   stages: [commit-msg]
+  
+- id: restrict-binary
+  name: Forbid binaries
+  description: Forbid binary files from being committed
+  entry: pre_commit_hooks/restrict-binary
+  language: script
+  types: ['binary']
