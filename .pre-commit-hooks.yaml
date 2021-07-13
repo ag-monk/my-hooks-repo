@@ -4,4 +4,10 @@
   entry: '\A(?![A-Z]+-[0-9]+)'
   args: [--multiline]
   language: pygrep
-  stages: [commit-msg] 
+  stages: [commit-msg]
+
+- id: checks-files
+  name: Restrict binary files and files with size more than 10 MB
+  entry: python sample.py
+  language: python
+  verbose: true  
